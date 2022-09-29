@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    default:
+      jdbcUrl: jdbc:mysql://localhost:3306/saas-test2?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true
+      username: root
+      password: saasdev
+    admin:
+      jdbcUrl: jdbc:mysql://192.168.1.106:3306/saas-admin-dev?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+      username: root
+      password: saasdev
+logging: 
+  level:
+    com.zaxxer.hikari: DEBUG
+    com.example.demo.mapper.UserMapper: DEBUG
+
+mybatis-plus:
+  configuration:
+    cache-enabled: true
+  mapper-locations:
+    - classpath*:mapper/*Mapper.xml
+#    ##日志级别
+#    logging.level.com.dalaoyang.dao.UserMapper=debug
+#    ##mybatis-plus mapper xml 文件地址
+#    mybatis-plus.mapper-locations=classpath*:mapper/*Mapper.xml
+#
+#    作者：dalaoyang
+#    链接：https://juejin.cn/post/6844903641325764616
+#    来源：稀土掘金
+#    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
